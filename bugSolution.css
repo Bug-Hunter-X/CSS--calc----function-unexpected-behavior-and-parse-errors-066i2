@@ -1,0 +1,27 @@
+/* Correct usage of calc() */
+#container {
+  width: calc(100% - 50px);
+  /* Correct: Explicitly sets width to 100% minus 50 pixels */
+}
+
+#element {
+  width: calc( (100% - 100px) / 2 );
+  /* Correct: Uses parentheses to control order of operations*/
+}
+
+#anotherElement {
+  height: calc(100vh - 2em); /* Correct: Mixes units but is clear*/
+}
+
+/* Incorrect usage of calc() - Demonstrates the bugs */
+/* #incorrectContainer {
+  width: calc(100%-50px);/* Missing spaces around operator */
+} */
+
+/* #incorrectElement {
+  width: calc(100% - 50%);/* Inconsistent units may lead to problems depending on context*/
+} */
+
+/* #anotherIncorrectElement {
+  height: calc(100vh -2em); /* Missing space, inconsistent units */
+} */
