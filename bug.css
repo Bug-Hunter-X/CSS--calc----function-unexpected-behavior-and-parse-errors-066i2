@@ -1,0 +1,1 @@
+The CSS property `calc()` can sometimes produce unexpected results if you're not careful with operator precedence and unit consistency. For example, `width: calc(100% - 50px);` works fine, but `width: calc(100% - 50%);` might not.  Also, forgetting to include spaces around the operators in `calc()` can lead to unexpected parse errors.
